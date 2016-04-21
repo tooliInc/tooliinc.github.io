@@ -1,3 +1,10 @@
+$color-text: #263238;
+$color-primary: #689F38;
+$color-accent: #E65100;
+
+$theme-primary: $color-primary;
+$theme-dark: $color-accent;
+
 html,
 body {
     height: 100%;
@@ -6,10 +13,11 @@ body {
 
 body {
     @include serif-font;
+    color: $color-text;
 }
 
 hr {
-    border-color: $theme-primary;
+    border-color: $theme-dark;
     border-width: 3px;
     max-width: 50px;
 }
@@ -74,17 +82,23 @@ aside {
     border-color: rgba($theme-dark, .5);
     @include sans-serif-font;
     @include transition-all;
+    .navbar-header { height: 85px; }
     .navbar-header .navbar-brand {
         color: $theme-primary;
         @include sans-serif-font;
-        font-weight: 700;
-        text-transform: uppercase;
+        font-family: 'Open Sans';
+        font-weight: normal;
+        font-size: 36px;
         &:hover,
         &:focus {
             color: darken($theme-primary, 10%);
         }
+
+    img { height: 50px; }
+    .brand-name { margin-left: 10px; vertical-align: middle; text-transform: none; }
     }
     .nav {
+        margin: 15px; 
         > li {
             > a,
             > a:focus {
@@ -112,7 +126,7 @@ aside {
         background-color: transparent;
         border-color: rgba(white, .3);
         .navbar-header .navbar-brand {
-            color: rgba(white, .7);
+            color: white;
             &:hover,
             &:focus {
                 color: white;
@@ -130,7 +144,7 @@ aside {
             border-color: rgba($theme-dark, .5);
             .navbar-header .navbar-brand {
                 color: $theme-primary;
-                font-size: 14px;
+                font-size: 30px;
                 &:hover,
                 &:focus {
                     color: darken($theme-primary, 10%);
@@ -222,6 +236,10 @@ header {
     }
 }
 
+#portfolio { 
+    img { max-width: 500px;  margin: auto; }
+}
+
 .portfolio-box {
     position: relative;
     display: block;
@@ -288,6 +306,9 @@ header {
 .text-primary {
     color: $theme-primary;
 }
+.text-accent {
+    color: $color-accent;
+}
 
 .no-gutter > [class*='col-'] {
     padding-right:0;
@@ -296,7 +317,7 @@ header {
 
 // Button Styles
 .btn-default {
-    @include button-variant($theme-dark, white, white);
+    @include button-variant(white, $theme-dark, $theme-dark);
 }
 
 .btn-primary {
