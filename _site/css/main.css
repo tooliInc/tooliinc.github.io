@@ -186,9 +186,14 @@ header {
   .service-box p {
     margin-bottom: 0; }
 
-#portfolio img {
-  max-width: 500px;
-  margin: auto; }
+@media (min-width: 768px) {
+  #portfolio img {
+    max-width: 500px;
+    margin: auto; } }
+@media (max-width: 768px) {
+  #portfolio img {
+    max-width: 350px;
+    margin: auto; } }
 
 .portfolio-box {
   position: relative;

@@ -237,7 +237,13 @@ header {
 }
 
 #portfolio { 
-    img { max-width: 500px;  margin: auto; }
+    @media (min-width: 768px) {
+        img { max-width: 500px;  margin: auto; }
+    }
+
+    @media (max-width: 768px) {
+        img { max-width: 350px;  margin: auto; }
+    }
 }
 
 .portfolio-box {
