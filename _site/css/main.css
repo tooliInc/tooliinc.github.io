@@ -1,3 +1,33 @@
+.device-container {
+  padding: 50px; }
+
+.navbar-brand {
+  padding: 8px 15px; }
+
+.navbar-header .brand-name {
+  color: #689F38;
+  font-size: 35px;
+  font-weight: 400;
+  font-family: 'Catamaran';
+  height: 50px !important;
+  display: inline-block;
+  vertical-align: middle;
+  padding: 15px; }
+
+.navbar-nav > li > a {
+  margin-top: 10px;
+  padding: 10px;
+  margin-right: 15px;
+  border: 1px solid transparent; }
+
+.navbar-default .navbar-nav > .active > a,
+.navbar-default .navbar-nav > .active > a:focus,
+.navbar-default .navbar-nav > .active > a:hover {
+  border-radius: 5px;
+  border: 1px solid #689F38;
+  background: white;
+  color: #689F38; }
+
 html,
 body {
   height: 100%;
@@ -55,80 +85,23 @@ aside {
 .no-padding {
   padding: 0; }
 
-.navbar-default {
-  background-color: white;
-  border-color: rgba(230, 81, 0, 0.5);
-  font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-  -webkit-transition: all 0.35s;
-  -moz-transition: all 0.35s;
-  transition: all 0.35s; }
-  .navbar-default .navbar-header {
-    height: 85px; }
-  .navbar-default .navbar-header .navbar-brand {
-    color: #689F38;
-    font-family: 'Open Sans', 'Helvetica Neue', Arial, sans-serif;
-    font-family: 'Open Sans';
-    font-weight: normal;
-    font-size: 36px; }
-    .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-      color: #4f792b; }
-    .navbar-default .navbar-header .navbar-brand img {
-      height: 50px; }
-    .navbar-default .navbar-header .navbar-brand .brand-name {
-      margin-left: 10px;
-      vertical-align: middle;
-      text-transform: none; }
-  .navbar-default .nav {
-    margin: 15px; }
-    .navbar-default .nav > li > a,
-    .navbar-default .nav > li > a:focus {
-      text-transform: uppercase;
-      font-weight: 700;
-      font-size: 13px;
-      color: #E65100; }
-      .navbar-default .nav > li > a:hover,
-      .navbar-default .nav > li > a:focus:hover {
-        color: #689F38; }
-    .navbar-default .nav > li.active > a,
-    .navbar-default .nav > li.active > a:focus {
-      color: #689F38 !important;
-      background-color: transparent; }
-      .navbar-default .nav > li.active > a:hover,
-      .navbar-default .nav > li.active > a:focus:hover {
-        background-color: transparent; }
-  @media (min-width: 768px) {
-    .navbar-default {
-      background-color: transparent;
-      border-color: rgba(255, 255, 255, 0.3); }
-      .navbar-default .navbar-header .navbar-brand {
-        color: white; }
-        .navbar-default .navbar-header .navbar-brand:hover, .navbar-default .navbar-header .navbar-brand:focus {
-          color: white; }
-      .navbar-default .nav > li > a,
-      .navbar-default .nav > li > a:focus {
-        color: rgba(255, 255, 255, 0.7); }
-        .navbar-default .nav > li > a:hover,
-        .navbar-default .nav > li > a:focus:hover {
-          color: white; }
-      .navbar-default.affix {
-        background-color: white;
-        border-color: rgba(230, 81, 0, 0.5); }
-        .navbar-default.affix .navbar-header .navbar-brand {
-          color: #689F38;
-          font-size: 30px; }
-          .navbar-default.affix .navbar-header .navbar-brand:hover, .navbar-default.affix .navbar-header .navbar-brand:focus {
-            color: #4f792b; }
-        .navbar-default.affix .nav > li > a,
-        .navbar-default.affix .nav > li > a:focus {
-          color: #E65100; }
-          .navbar-default.affix .nav > li > a:hover,
-          .navbar-default.affix .nav > li > a:focus:hover {
-            color: #689F38; } }
+img.img-hoverable:hover {
+  opacity: .9; }
 
+#mainNav {
+  height: 65px;
+  background: white; }
+  #mainNav img {
+    height: 50px; }
+
+@media (min-width: 768px) {
+  .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+    color: #689F38; } }
 header {
   position: relative;
   width: 100%;
   min-height: auto;
+  margin-top: 65px;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
@@ -142,37 +115,34 @@ header {
     text-align: center;
     padding: 100px 15px 100px;
     width: 100%; }
-    header .header-content .header-content-inner h1 {
-      font-weight: 700;
-      text-transform: uppercase;
-      margin-top: 0;
-      margin-bottom: 0; }
-    header .header-content .header-content-inner hr {
-      margin: 30px auto; }
-    header .header-content .header-content-inner p {
-      font-weight: 300;
-      color: rgba(255, 255, 255, 0.7);
-      font-size: 16px;
-      margin-bottom: 50px; }
+    header .header-content .header-content-inner {
+      background: rgba(0, 0, 0, 0.25);
+      padding: 50px; }
+      header .header-content .header-content-inner h1 {
+        font-size: 52px;
+        color: white;
+        margin-top: 0;
+        margin-bottom: 25px;
+        font-family: 'Dosis', sans-serif; }
+      header .header-content .header-content-inner hr {
+        margin: 30px auto; }
+      header .header-content .header-content-inner p {
+        font-weight: 300;
+        color: rgba(255, 255, 255, 0.7);
+        font-size: 16px;
+        margin-bottom: 50px; }
   @media (min-width: 768px) {
     header {
       min-height: 100%; }
-      header .header-content {
-        position: absolute;
-        top: 50%;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%);
-        padding: 0 50px; }
-        header .header-content .header-content-inner {
-          max-width: 1000px;
+      header .header-content .header-content-inner {
+        max-width: 1000px;
+        margin-left: auto;
+        margin-right: auto; }
+        header .header-content .header-content-inner p {
+          font-size: 18px;
+          max-width: 80%;
           margin-left: auto;
-          margin-right: auto; }
-          header .header-content .header-content-inner p {
-            font-size: 18px;
-            max-width: 80%;
-            margin-left: auto;
-            margin-right: auto; } }
+          margin-right: auto; } }
 
 .section-heading {
   margin-top: 0; }

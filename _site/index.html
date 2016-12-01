@@ -13,8 +13,13 @@
 
     <!-- Bootstrap Core CSS -->
     <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/device-mockups2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lity.min.css" />
+
 
     <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,400,600" rel="stylesheet">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
@@ -58,16 +63,19 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav navbar-right">
                 <li>
-                    <a class="page-scroll" href="#about">About</a>
+                    <a class="page-scroll" href="#services">Services</a>
                 </li>
                 <li>
-                    <a class="page-scroll" href="#services">Services</a>
+                    <a class="page-scroll" href="#about">About</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#portfolio">How it works</a>
                 </li>
                 <li>
                     <a class="page-scroll" href="#contact">Contact</a>
+                </li>
+                <li>
+                    <a style="padding: 0; margin: 0;" href='https://play.google.com/store/apps/details?id=io.tooli&utm_source=global_co&utm_medium=prtnr&utm_content=Mar2515&utm_campaign=PartBadge&pcampaignid=MKT-Other-global-all-co-prtnr-py-PartBadge-Mar2515-1'><img alt='Get it on Google Play' src='https://play.google.com/intl/en_us/badges/images/generic/en_badge_web_generic.png' style="height: 60px;"/></a>
                 </li>
             </ul>
         </div>
@@ -76,19 +84,43 @@
     <!-- /.container-fluid -->
 </nav>
 
-  <header>
-    <div class="header-content">
-        <div class="header-content-inner">
-            <h1>Welcome to Tooli</h1>
-            <hr>
-            <p>Debating if you should buy a tool or rent it for your next project because the rental cost is so high? </p>
+  <!--iframe width="853" height="480" src="https://www.youtube.com/embed/eLmbl0yQEbE?rel=0&amp;controls=1&amp;showinfo=0" 			frameborder="0" allowfullscreen></iframe-->
 
-            <p>Tooli makes that decision easier. Buy the tool and turn it into an income producing asset or rent it from someone local in your network for a fraction of the cost. It’s a win-win for everyone!</p>
-            <a href="#about" class="btn btn-primary btn-xl page-scroll">Find Out More</a>
+
+<header>
+
+
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-7">
+                <div class="header-content">
+                    <div class="header-content-inner">
+                        <h1>Tooli - Your peer to peer tool sharing app.</h1>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-5">
+                <div class="device-container">
+                    <div class="device-mockup" data-device="iphone6_plus" data-orientation="portrait" data-color="white">
+                        <div class="device">
+                            <div class="screen">
+                                <!-- Demo image for screen mockup, you can put an image here, some HTML, an animation, video, or anything else! -->
+                                <a href="http://www.youtube.com/watch?v=eLmbl0yQEbE" data-lity>
+                                	<img src="/img/header-screenshot.png" class="img-responsive img-hoverable" alt="">
+                                </a>
+                            </div>
+                            <div class="button">
+                                <!-- You can hook the "home button" to some JavaScript events or just remove it -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 </header>
-
   <section id="services">
     <div class="container">
         <div class="row">
@@ -269,6 +301,7 @@
 <!-- Custom Theme JavaScript -->
 <script src="js/creative.js"></script>
 <script src="js/app-slide-show.js"></script>
+<script src="js/lity.min.js"></script>
 
 </body>
 
