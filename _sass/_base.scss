@@ -100,6 +100,8 @@ img.img-hoverable:hover { opacity: .9; }
 @media (min-width: 768px) {
 .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
     color: $color-primary;
+    font-family: 'Catamaran';
+    font-size: 17px;
 }
 }
 
