@@ -6,9 +6,9 @@
 
 .navbar-header .brand-name {
   color: #689F38;
-  font-size: 35px;
+  font-size: 40px;
   font-weight: 400;
-  font-family: 'Catamaran';
+  font-family: 'Dosis';
   height: 50px !important;
   display: inline-block;
   vertical-align: middle;
@@ -96,7 +96,9 @@ img.img-hoverable:hover {
 
 @media (min-width: 768px) {
   .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
-    color: #689F38; } }
+    color: #689F38;
+    font-family: 'Dosis';
+    font-size: 20px; } }
 header {
   position: relative;
   width: 100%;

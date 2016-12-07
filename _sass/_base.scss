@@ -9,7 +9,7 @@ $theme-dark: $color-accent;
 
 .device-container { padding: 50px; }
 .navbar-brand { padding: 8px 15px; }
-.navbar-header .brand-name { color: $color-primary; font-size: 35px; font-weight: 400; font-family: 'Catamaran'; height: 50px !important; display: inline-block; vertical-align: middle; padding: 15px; }
+.navbar-header .brand-name { color: $color-primary; font-size: 40px; font-weight: 400; font-family: 'Dosis'; height: 50px !important; display: inline-block; vertical-align: middle; padding: 15px; }
 
 .navbar-nav > li > a { margin-top: 10px; padding: 10px; margin-right: 15px; border: 1px solid transparent; }
 
@@ -100,6 +100,8 @@ img.img-hoverable:hover { opacity: .9; }
 @media (min-width: 768px) {
 .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
     color: $color-primary;
+    font-family: 'Dosis';
+    font-size: 20px;
 }
 }
 
