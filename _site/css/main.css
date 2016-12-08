@@ -17,7 +17,8 @@
 .navbar-nav > li > a {
   margin-top: 10px;
   padding: 10px;
-  margin-right: 15px;
+  margin-right: 8px;
+  margin-left: 8px;
   border: 1px solid transparent; }
 
 .navbar-default .navbar-nav > .active > a,
@@ -28,6 +29,12 @@
   background: white;
   color: #689F38; }
 
+@media (max-width: 767px) {
+  .navbar-default .navbar-collapse.collapse {
+    border-color: #689F38;
+    background: white;
+    margin-top: 14px;
+    text-align: center; } }
 html,
 body {
   height: 100%;
@@ -94,11 +101,11 @@ img.img-hoverable:hover {
   #mainNav img {
     height: 50px; }
 
-@media (min-width: 768px) {
-  .navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
-    color: #689F38;
-    font-family: 'Dosis';
-    font-size: 20px; } }
+.navbar-default .nav > li > a, .navbar-default .nav > li > a:focus {
+  color: #689F38;
+  font-family: 'Dosis';
+  font-size: 20px; }
+
 header {
   position: relative;
   width: 100%;
