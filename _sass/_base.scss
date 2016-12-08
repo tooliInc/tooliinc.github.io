@@ -19,12 +19,13 @@ $theme-dark: $color-accent;
 
 
 @media (max-width: 767px) {
-.navbar-default .navbar-collapse.collapse {
-    border-color: $color-primary;
-    background: white;
-    margin-top: 14px;
-    text-align: center;
-}
+    .navbar-default .navbar-collapse.collapse {
+        border-color: $color-primary;
+        background: white;
+        margin-top: 14px;
+        text-align: center;
+    }
+    #portfolio .screenshots { display: none;}
 }
 
 //

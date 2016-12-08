@@ -34,7 +34,10 @@
     border-color: #689F38;
     background: white;
     margin-top: 14px;
-    text-align: center; } }
+    text-align: center; }
+
+  #portfolio .screenshots {
+    display: none; } }
 html,
 body {
   height: 100%;
