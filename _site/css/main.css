@@ -215,8 +215,6 @@ header {
     #portfolio .row-alt img {
       left: 0; } }
   @media (max-width: 768px) {
-    #portfolio .col-sm-6 {
-      height: 650px; }
     #portfolio h4 {
       line-height: 42px; }
     #portfolio img, #portfolio .row-alt img {
