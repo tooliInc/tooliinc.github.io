@@ -13,3 +13,49 @@
 <script src="js/creative.js"></script>
 <script src="js/app-slide-show.js"></script>
 <script src="js/lity.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA0xe0bIIQjKhRmQWAEfHGdXu5OdqctWzw",
+    authDomain: "tooli-website.firebaseapp.com",
+    databaseURL: "https://tooli-website.firebaseio.com",
+    storageBucket: "tooli-website.appspot.com",
+    messagingSenderId: "685384986804"
+  };
+  firebase.initializeApp(config);
+
+$('#requestInvite').on('click', function() {
+	var email = $('#email').val()
+
+	if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))  {
+		swal("Oops..", "You have entered an invalid email address!", "error");
+		return false;
+	}
+
+	var invitesRef = firebase.database().ref('invites');
+	invitesRef
+		.orderByChild("email")
+		.equalTo(email)
+		.once('value', function(snapshot) {
+			if(!snapshot.exists()) {
+				invitesRef
+					.push({email: email, timestamp: new Date().toString()})
+					.then(function() {
+    					swal("Done", "Your request was sent.", "success")
+  					});
+			} else {
+				sweetAlert("Oops...", "A request was already sent for " + email + "!", "warning");
+			}
+	});
+
+	
+
+	return false;
+})
+
+</script>
+
