@@ -211,7 +211,10 @@ header {
     h4 { font-weight: bold; display: block; font-size: 26px; color: black; }
 
     .col-desc { margin-top: 25px; }
-    .col-sm-6 { height: 800px; }
+
+    @media (min-width: 768px) {    
+        .col-sm-6 { height: 800px; }
+    }
 
     li { opacity: .5; list-style: none; font-size: 20px; margin: 45px 0px; }
     li.active { opacity: 1; }
