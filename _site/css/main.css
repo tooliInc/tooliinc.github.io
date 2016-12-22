@@ -190,8 +190,9 @@ header {
     color: black; }
   #portfolio .col-desc {
     margin-top: 25px; }
-  #portfolio .col-sm-6 {
-    height: 800px; }
+  @media (min-width: 768px) {
+    #portfolio .col-sm-6 {
+      height: 900px; } }
   #portfolio li {
     opacity: .5;
     list-style: none;
