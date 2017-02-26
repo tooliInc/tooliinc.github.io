@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tooli - Your peer to peer and contractor to contractor tool rental service</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" type="text/css" href="css/device-mockups2.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/lity.min.css" />
+    <link rel="stylesheet" type="text/css" href="css/sweetalert.css">
+
+    <!-- Custom Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Dosis" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,400,600" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Merriweather:400,300,300italic,400italic,700,700italic,900,900italic' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" type="text/css">
+
+    <!-- Plugin CSS -->
+    <link rel="stylesheet" href="css/animate.min.css" type="text/css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="css/main.css" type="text/css">
+
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+
+
+<body id="page-top" class="page-content">
+  <nav id="mainNav" class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <a class="navbar-brand page-scroll" href="/">
+                <span> 
+                    <img src="img/google-store-icon.png" />
+                    <span class="brand-name">Tooli</span>
+                </span>
+            </a>
+        </div>
+
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+            <h1>FAQ</h1>
+
+<br>
+<br>
+
+<h2 id="serviceFees">What are Tooli service fees?</h2>
+
+<p>
+To help cover the costs of processing user payments and application maintenance, a service fee is charged to the owner and renter on every reservation. The amount of the service fee is listed below. 
+
+<table class="table table-striped">
+	<thead>
+		<tr>
+			<th></th>
+			<th>Fees</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th>Consumer</th>
+			<td>$1 + 3% of rental price</td>
+		</tr>
+		<tr>
+			<th>Consumer</th>
+			<td>3% of any processed deposit not refunded</td>
+		</tr>
+		<tr>
+			<th>Owner</th>
+			<td>13% of rental price</td>
+		</tr>
+	</tbody>
+</table>
+
+</p>
+
+
+
+        	</div>
+        </div>
+    </div>
+</section>
+  
+ <!-- jQuery -->
+<script src="js/jquery.js"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+
+<!-- Plugin JavaScript -->
+<script src="js/jquery.easing.min.js"></script>
+<script src="js/jquery.fittext.js"></script>
+<script src="js/wow.min.js"></script>
+
+<!-- Custom Theme JavaScript -->
+<script src="js/creative.js"></script>
+<script src="js/app-slide-show.js"></script>
+<script src="js/lity.min.js"></script>
+<script src="js/sweetalert.min.js"></script>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+
+<script>
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyA0xe0bIIQjKhRmQWAEfHGdXu5OdqctWzw",
+    authDomain: "tooli-website.firebaseapp.com",
+    databaseURL: "https://tooli-website.firebaseio.com",
+    storageBucket: "tooli-website.appspot.com",
+    messagingSenderId: "685384986804"
+  };
+  firebase.initializeApp(config);
+
+$('#requestInvite').on('click', function() {
+	var email = $('#email').val()
+
+	if (!/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email))  {
+		swal("Oops..", "You have entered an invalid email address!", "error");
+		return false;
+	}
+
+	var invitesRef = firebase.database().ref('invites');
+	invitesRef
+		.orderByChild("email")
+		.equalTo(email)
+		.once('value', function(snapshot) {
+			if(!snapshot.exists()) {
+				invitesRef
+					.push({email: email, timestamp: new Date().toString()})
+					.then(function() {
+    					swal("Done", "Your request was sent.", "success")
+  					});
+			} else {
+				sweetAlert("Oops...", "A request was already sent for " + email + "!", "warning");
+			}
+	});
+
+	
+
+	return false;
+})
+
+</script>
+
+
+<script>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+  ga('create', 'UA-89353374-1', 'auto');
+  ga('send', 'pageview');
+
+</script>
+
+
+</body>
+
+</html>
