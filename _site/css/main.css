@@ -324,14 +324,20 @@ img::-moz-selection {
 body {
   -webkit-tap-highlight-color: #E65100; }
 
-.page-content .brand-name {
-  color: #689F38; }
-.page-content .navbar-default .nav > li > a,
-.page-content .navbar-default .nav > li > a:focus {
-  color: #E65100; }
-.page-content h2 {
-  margin-top: 0;
-  margin-bottom: 36px; }
-.page-content h3 {
-  margin-top: 75px;
-  margin-bottom: 25px; }
+.page-content {
+  font-weight: 100; }
+  .page-content .brand-name {
+    color: #689F38; }
+  .page-content .navbar-default .nav > li > a,
+  .page-content .navbar-default .nav > li > a:focus {
+    color: #E65100; }
+  .page-content h1 {
+    margin-top: 25px;
+    margin-bottom: 75px;
+    font-size: 3em; }
+  .page-content h2 {
+    margin-top: 75px;
+    margin-bottom: 15px; }
+  .page-content h3 {
+    margin-top: 75px;
+    margin-bottom: 15px; }
